@@ -53,14 +53,16 @@ then run command one by one
 
 8. Setup github secrets
 
-AWS_ACCESS_KEY_ID=
+AWS_ACCESS_KEY_ID = AKIAXNNM2ZFOP6U3FRN5
 
-AWS_SECRET_ACCESS_KEY=
+AWS_SECRET_ACCESS_KEY = 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
 
 AWS_REGION=ap-south-1
 
-AWS_ECR_LOGIN_URI=566373416292.dkr.ecr.ap-south-1.amazonaws.com
 
-ECR_REPOSITORY_NAME=sensor-fault
 
-MONGO_DB_URL=mongodb+srv://avnish:Aa327030@cluster0.or68e.mongodb.net/admin?authSource=admin&replicaSet=atlas-desfdx-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
+AWS_ECR_LOGIN_URI = 509852961116.dkr.ecr.ap-south-1.amazonaws.com/sensor-fault
+
+ECR_REPOSITORY_NAME = sensor-fault
+
+MONGO_DB_URL = mongodb+srv://rituu:RG1671@cluster0.uiabbpv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0

@@ -1,7 +1,7 @@
 dill==0.3.5.1
 dnspython==2.2.1
 evidently==0.4.33
-fastapi==0.78.0
+fastapi>=0.110.0
 from-root==1.0.2
 httptools>=0.6.3
 imblearn==0.0
@@ -18,4 +18,5 @@ xgboost==1.6.2
 neuro-mf==0.0.5
 PyYAML>=6.0.2
 boto3
+pydantic>=2.7.0
 -e .
