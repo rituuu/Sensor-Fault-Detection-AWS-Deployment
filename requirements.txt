@@ -19,4 +19,5 @@ neuro-mf==0.0.5
 PyYAML>=6.0.2
 boto3
 pydantic>=2.7.0
+python-multipart
 -e .
