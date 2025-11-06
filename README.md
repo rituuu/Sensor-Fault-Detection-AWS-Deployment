@@ -1,22 +1,7 @@
 # Sensor-Fault-Detection
 
-### Problem Statement
-The Air Pressure System (APS) is a critical component of a heavy-duty vehicle that uses compressed air to force a piston to provide pressure to the brake pads, slowing the vehicle down. The benefits of using an APS instead of a hydraulic system are the easy availability and long-term sustainability of natural air.
 
-This is a Binary Classification problem, in which the affirmative class indicates that the failure was caused by a certain component of the APS, while the negative class
-indicates that the failure was caused by something else.
 
-### Solution Proposed 
-In this project, the system in focus is the Air Pressure system (APS) which generates pressurized air that are utilized in various functions in a truck, such as braking and gear changes. The datasets positive class corresponds to component failures for a specific component of the APS system. The negative class corresponds to trucks with failures for components not related to the APS system.
-
-The problem is to reduce the cost due to unnecessary repairs. So it is required to minimize the false predictions.
-
-## Tech Stack Used
-1. Python 
-2. FastAPI 
-3. Machine learning algorithms
-4. Docker
-5. MongoDB
 
 ## Infrastructure Required.
 
@@ -33,14 +18,203 @@ Before we run the project, make sure that you are having MongoDB in your local s
 ![image](https://user-images.githubusercontent.com/57321948/193536736-5ccff349-d1fb-486e-b920-02ad7974d089.png)
 
 
-## Project Archietecture
+## Project Architecture
 ![image](https://user-images.githubusercontent.com/57321948/193536768-ae704adc-32d9-4c6c-b234-79c152f756c5.png)
 
 
-## Deployment Archietecture
+## Deployment Architecture
 ![image](https://user-images.githubusercontent.com/57321948/193536973-4530fe7d-5509-4609-bfd2-cd702fc82423.png)
 
 
+
+# 🚛 Sensor Fault Detection — End-to-End AI & MLOps Project
+
+This repository contains the **complete Sensor Fault Detection System**, integrating **Data Engineering, Machine Learning, and MLOps** to build a production-grade pipeline for predictive maintenance in heavy-duty vehicles.
+
+The system identifies **Air Pressure System (APS)** faults by analyzing live sensor data streams, automating the entire lifecycle — from **data ingestion** to **real-time fault prediction APIs**.
+
+---
+
+## 🧭 Executive Summary
+
+The **Sensor Fault Detection** project represents an end-to-end implementation of an AI-powered fault detection system designed for **industrial IoT (IIoT)** use cases.
+
+It automates:
+
+* **Data Streaming & Storage** → Real-time sensor data via Apache Kafka to MongoDB.
+* **Data Validation & Transformation** → Ensures schema integrity, drift detection, and preprocessing.
+* **Model Training & Evaluation** → Binary classification using optimized ML pipelines.
+* **Model Serving** → Exposes `/train` and `/predict` endpoints via FastAPI.
+* **Deployment** → Dockerized and CI/CD-ready for scalable deployment on AWS or local environments.
+
+By reducing false positives and improving system reliability, this project supports **predictive maintenance** and **cost-effective operations** in safety-critical automotive systems.
+
+---
+
+## 🌟 Key Achievements
+
+* 🧩 **Engineered** a complete real-time data pipeline using **Kafka** and **MongoDB** handling **35,000+ APS sensor readings**.
+* 🤖 **Developed** an ML pipeline for **binary classification** to detect APS-related faults.
+* ⚙️ **Integrated** ETL, validation, transformation, training, and prediction workflows under one MLOps framework.
+* 🧠 **Deployed** containerized **FastAPI endpoints** for `/train` and `/predict` supporting scalable inference.
+* ☁️ **Enabled** CI/CD-ready and **environment-driven configuration** for smooth deployment across cloud platforms.
+
+---
+
+## 🧠 Problem Context
+### Problem Statement
+The Air Pressure System (APS) is a critical component of a heavy-duty vehicle that uses compressed air to force a piston to provide pressure to the brake pads, slowing the vehicle down. The benefits of using an APS instead of a hydraulic system are the easy availability and long-term sustainability of natural air.
+
+This is a Binary Classification problem, in which the affirmative class indicates that the failure was caused by a certain component of the APS, while the negative class
+indicates that the failure was caused by something else.
+
+The **Air Pressure System (APS)** provides compressed air for vehicle braking and gear systems.
+Faults in APS components can lead to unsafe operation, so early detection is crucial.
+
+* **Positive Class:** Fault due to APS components
+* **Negative Class:** Other unrelated failures
+* **Goal:** Minimize false positives and reduce unnecessary maintenance.
+
+### Solution Proposed 
+In this project, the system in focus is the Air Pressure system (APS) which generates pressurized air that are utilized in various functions in a truck, such as braking and gear changes. The datasets positive class corresponds to component failures for a specific component of the APS system. The negative class corresponds to trucks with failures for components not related to the APS system.
+
+The problem is to reduce the cost due to unnecessary repairs. So it is required to minimize the false predictions.
+---
+
+## 🏗️ System Architecture
+
+```
+                ┌────────────────────────┐
+                │   Local Data Source    │
+                └────────────┬───────────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │   Apache Kafka       │
+                  │  (Producer + Topic)  │
+                  └────────────┬─────────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │ Kafka Consumer →     │
+                  │     MongoDB Store    │
+                  └────────────┬─────────┘
+                             │
+                             ▼
+                ┌─────────────────────────────┐
+                │ ETL Pipeline (Ingestion,    │
+                │ Validation, Transformation) │
+                └────────────┬────────────────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │ Model Training &     │
+                  │ Evaluation           │
+                  └────────────┬─────────┘
+                             │
+                             ▼
+                ┌────────────────────────┐
+                │ FastAPI Endpoints      │
+                │ /train & /predict      │
+                └────────────────────────┘
+```
+
+---
+
+## 🧱 Components
+
+### **1. Data Engineering (ETL Layer)**
+
+* Streams live APS sensor data to Kafka.
+* Consumes and stores data in MongoDB.
+* Performs automated ingestion, validation, and transformation.
+  ## Data Collections
+![image](https://user-images.githubusercontent.com/57321948/193536736-5ccff349-d1fb-486e-b920-02ad7974d089.png)
+
+
+### **2. Machine Learning (Model Layer)**
+
+* Binary classification model to predict fault occurrence.
+* Trained using validated and transformed features.
+* Evaluates using accuracy, precision, recall, and F1-score.
+  ## Project Architecture
+![image](https://user-images.githubusercontent.com/57321948/193536768-ae704adc-32d9-4c6c-b234-79c152f756c5.png)
+
+### **3. API & Serving Layer**
+
+* **/train** — Triggers data ingestion, validation, transformation, and model retraining.
+* **/predict** — Accepts sensor input data and returns real-time fault prediction.
+* Implemented using **FastAPI** with structured logging.
+
+### **4. Deployment Layer**
+
+* Fully containerized using **Docker**.
+* Integrated with **CI/CD pipelines** for automated build and deployment.
+* Supports both **local** and **AWS-based deployment**.
+  ## Deployment Architecture
+  ![image](https://user-images.githubusercontent.com/57321948/193536973-4530fe7d-5509-4609-bfd2-cd702fc82423.png)
+---
+
+## 🧰 Tech Stack
+
+| Layer           | Tools & Technologies |
+| --------------- | -------------------- |
+| Streaming       | Apache Kafka         |
+| Database        | MongoDB              |
+| Programming     | Python               |
+| API Framework   | FastAPI              |
+| Version Control | Git, Github          |
+| MLOps           | CI/CD Integration, Github Actions |
+| Deployment      | AWS EC2, ECR and S3, Docker   |
+
+---
+
+## 🚀 How It Works
+
+1. **Kafka Producer** streams sensor data from the local environment.
+2. **Kafka Consumer** listens to the topic and writes data to MongoDB.
+3. **Data Ingestion** fetches the latest records for preprocessing.
+4. **Data Validation** ensures schema integrity and checks for drift.
+5. **Data Transformation** scales and encodes features for training.
+6. **Model Training** executes and stores the trained model artifact.
+7. **FastAPI Service** exposes endpoints for real-time retraining and prediction.
+
+---
+
+## 📦 Output Artifacts
+
+| Stage          | Output                                    |
+| -------------- | ----------------------------------------- |
+| Ingestion      | train.csv, test.csv                       |
+| Validation     | drift_report.yaml                         |
+| Transformation | train.npy, test.npy, preprocessing.pkl    |
+| Model Training | model.pkl, metrics.json                   |
+| Serving        | FastAPI endpoints `/train` and `/predict` |
+
+---
+
+## 🧾 Summary (Impact)
+
+This project showcases the integration of **Data Engineering + Machine Learning + MLOps**, aligning with real-world **AI infrastructure** standards.
+It demonstrates:
+
+* **Automation:** Minimal human intervention across the ML lifecycle.
+* **Scalability:** Modular, Dockerized setup ready for enterprise environments.
+* **Production-grade Design:** Real-time ingestion, validation, training, and inference flow.
+
+---
+
+## 💼 Recruiter Note
+
+This project reflects strong **cross-disciplinary expertise** across Data Engineering, ML, and MLOps — demonstrating:
+
+* Hands-on experience with **streaming data systems** (Kafka, MongoDB).
+* End-to-end **model lifecycle management** via APIs.
+* Practical understanding of **CI/CD, Dockerization**, and **FastAPI-based deployment**.
+  It’s a **portfolio-grade, ATS-friendly project** aligning with Google and AWS AI engineering standards.
+
+---
+#### Project Setup for running locally
 ### Step 1: Clone the repository
 ```bash
 git clone https://github.com/sethusaim/Sensor-Fault-Detection.git
@@ -49,7 +223,7 @@ git clone https://github.com/sethusaim/Sensor-Fault-Detection.git
 ### Step 2- Create a conda environment after opening the repository
 
 ```bash
-conda create -n sensor python=3.7.6 -y
+conda create -n sensor python=3.11.13 -y
 ```
 
 ```bash
@@ -61,21 +235,21 @@ conda activate sensor
 pip install -r requirements.txt
 ```
 
-### Step 4 - Export the environment variable
+### Step 4 - Set environment variable in .env file
 ```bash
-export AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
+AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
 
-export AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
+AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>
 
-export AWS_DEFAULT_REGION=<AWS_DEFAULT_REGION>
+AWS_DEFAULT_REGION=<AWS_DEFAULT_REGION>
 
-export MONGODB_URL="mongodb+srv://<username>:<password>@ineuron-ai-projects.7eh1w4s.mongodb.net/?retryWrites=true&w=majority"
+MONGODB_URL="mongodb+srv://<username>:<password>@-projects.7eh1w4s.mongodb.net/?retryWrites=true&w=majority"
 
 ```
 
 ### Step 5 - Run the application server
 ```bash
-python app.py
+python main.py
 ```
 
 ### Step 6. Train application
@@ -90,7 +264,7 @@ http://localhost:8080/predict
 
 ```
 
-## Run locally
+## Run locally using Docker
 
 1. Check if the Dockerfile is available in the project directory
 
@@ -105,24 +279,10 @@ docker build --build-arg AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID> --build-arg AWS_S
 docker run -d -p 8080:8080 <IMAGE_NAME>
 ```
 
-To run the project  first execute the below commmand.
-MONGO DB URL: 
-```
-mongodb+srv://avnish:XglZZ9OkjjUw74pZ@ineuron-ai-projects.7eh1w4s.mongodb.net/admin?authSource=admin&replicaSet=atlas-okvkrd-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
-```
-windows user
+## 📚 License & Attribution
 
-```
-MONGO_DB_URL=mongodb+srv://avnish:XglZZ9OkjjUw74pZ@ineuron-ai-projects.7eh1w4s.mongodb.net/admin?authSource=admin&replicaSet=atlas-okvkrd-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
-```
+Developed by **Ritu Gujela**
+For academic and professional demonstration purposes.
+All data and environment keys are anonymized.
 
-Linux user
-
-```
-export MONGO_DB_URL=mongodb+srv://avnish:XglZZ9OkjjUw74pZ@ineuron-ai-projects.7eh1w4s.mongodb.net/admin?authSource=admin&replicaSet=atlas-okvkrd-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
-```
-
-then run 
-```
-python main.py
-```
+---
