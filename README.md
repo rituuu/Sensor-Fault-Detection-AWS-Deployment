@@ -108,7 +108,7 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
   #### Project Architecture
 ![image](https://user-images.githubusercontent.com/57321948/193536768-ae704adc-32d9-4c6c-b234-79c152f756c5.png)
 
-### **4. MLOps Deployment Layer**
+### **3. MLOps Deployment Layer**
 
 * Fully containerized using **Docker**.
 * Integrated with **CI/CD pipelines** for automated build and deployment.
