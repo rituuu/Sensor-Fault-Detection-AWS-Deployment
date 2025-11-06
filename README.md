@@ -119,7 +119,6 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
 * Implemented using **FastAPI** with structured logging.
   
   #### Deployment Architecture
-  ![image](https://user-images.githubusercontent.com/57321948/193536973-4530fe7d-5509-4609-bfd2-cd702fc82423.png)
   <img width="919" height="260" alt="image" src="https://github.com/user-attachments/assets/b0ba3d15-6c9f-4d4c-a23a-e7bffb2df3a5" />
 
 ---
