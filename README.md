@@ -108,17 +108,17 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
   #### Project Architecture
 ![image](https://user-images.githubusercontent.com/57321948/193536768-ae704adc-32d9-4c6c-b234-79c152f756c5.png)
 
-### **3. API & Serving Layer**
-
-* **/train** — Triggers data ingestion, validation, transformation, and model retraining.
-* **/predict** — Accepts sensor input data and returns real-time fault prediction.
-* Implemented using **FastAPI** with structured logging.
-
-### **4. Deployment Layer**
+### **4. MLOps Deployment Layer**
 
 * Fully containerized using **Docker**.
 * Integrated with **CI/CD pipelines** for automated build and deployment.
 * Supports both **local** and **AWS-based deployment**.
+  **Fast API endpoint**
+
+* **/train** — Triggers data ingestion, validation, transformation, and model retraining.
+* **/predict** — Accepts sensor input data and returns real-time fault prediction.
+* Implemented using **FastAPI** with structured logging.
+  
   #### Deployment Architecture
   ![image](https://user-images.githubusercontent.com/57321948/193536973-4530fe7d-5509-4609-bfd2-cd702fc82423.png)
 ---
