@@ -7,7 +7,7 @@ The system identifies **Air Pressure System (APS)** faults by analyzing live sen
 
 ---
 
-## Executive Summary
+## Project Summary
 
 The **Sensor Fault Detection** project represents an end-to-end implementation of an AI-powered fault detection system designed for **industrial IoT (IIoT)** use cases.
 
