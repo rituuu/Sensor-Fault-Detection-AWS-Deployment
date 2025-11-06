@@ -112,8 +112,7 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
 
 * Fully containerized using **Docker**.
 * Integrated with **CI/CD pipelines** for automated build and deployment.
-* Supports both **local** and **AWS-based deployment**.
-  **Fast API endpoint**
+  ####  **Fast API endpoint**
 
 * **/train** — Triggers data ingestion, validation, transformation, and model retraining.
 * **/predict** — Accepts sensor input data and returns real-time fault prediction.
