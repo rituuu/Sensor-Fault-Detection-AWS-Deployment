@@ -1,33 +1,5 @@
-# Sensor-Fault-Detection
 
-
-
-
-## Infrastructure Required.
-
-1. AWS S3
-2. AWS EC2
-3. AWS ECR
-4. Git Actions
-5. Terraform
-
-## How to run?
-Before we run the project, make sure that you are having MongoDB in your local system, with Compass since we are using MongoDB for data storage. You also need AWS account to access the service like S3, ECR and EC2 instances.
-
-## Data Collections
-![image](https://user-images.githubusercontent.com/57321948/193536736-5ccff349-d1fb-486e-b920-02ad7974d089.png)
-
-
-## Project Architecture
-![image](https://user-images.githubusercontent.com/57321948/193536768-ae704adc-32d9-4c6c-b234-79c152f756c5.png)
-
-
-## Deployment Architecture
-![image](https://user-images.githubusercontent.com/57321948/193536973-4530fe7d-5509-4609-bfd2-cd702fc82423.png)
-
-
-
-# 🚛 Sensor Fault Detection — End-to-End AI & MLOps Project
+#  Sensor Fault Detection — End-to-End AI & MLOps Project
 
 This repository contains the **complete Sensor Fault Detection System**, integrating **Data Engineering, Machine Learning, and MLOps** to build a production-grade pipeline for predictive maintenance in heavy-duty vehicles.
 
@@ -35,7 +7,7 @@ The system identifies **Air Pressure System (APS)** faults by analyzing live sen
 
 ---
 
-## 🧭 Executive Summary
+## Executive Summary
 
 The **Sensor Fault Detection** project represents an end-to-end implementation of an AI-powered fault detection system designed for **industrial IoT (IIoT)** use cases.
 
@@ -61,7 +33,7 @@ By reducing false positives and improving system reliability, this project suppo
 
 ---
 
-## 🧠 Problem Context
+## Problem Context
 ### Problem Statement
 The Air Pressure System (APS) is a critical component of a heavy-duty vehicle that uses compressed air to force a piston to provide pressure to the brake pads, slowing the vehicle down. The benefits of using an APS instead of a hydraulic system are the easy availability and long-term sustainability of natural air.
 
@@ -78,7 +50,7 @@ Faults in APS components can lead to unsafe operation, so early detection is cru
 ### Solution Proposed 
 In this project, the system in focus is the Air Pressure system (APS) which generates pressurized air that are utilized in various functions in a truck, such as braking and gear changes. The datasets positive class corresponds to component failures for a specific component of the APS system. The negative class corresponds to trucks with failures for components not related to the APS system.
 
-The problem is to reduce the cost due to unnecessary repairs. So it is required to minimize the false predictions.
+#### The problem is to reduce the cost due to unnecessary repairs. So it is required to minimize the false predictions.
 ---
 
 ## 🏗️ System Architecture
@@ -119,16 +91,14 @@ The problem is to reduce the cost due to unnecessary repairs. So it is required 
                 └────────────────────────┘
 ```
 
----
-
-## 🧱 Components
+## Components
 
 ### **1. Data Engineering (ETL Layer)**
 
 * Streams live APS sensor data to Kafka.
 * Consumes and stores data in MongoDB.
 * Performs automated ingestion, validation, and transformation.
-  ## Data Collections
+ 
 ![image](https://user-images.githubusercontent.com/57321948/193536736-5ccff349-d1fb-486e-b920-02ad7974d089.png)
 
 
@@ -137,7 +107,7 @@ The problem is to reduce the cost due to unnecessary repairs. So it is required 
 * Binary classification model to predict fault occurrence.
 * Trained using validated and transformed features.
 * Evaluates using accuracy, precision, recall, and F1-score.
-  ## Project Architecture
+  #### Project Architecture
 ![image](https://user-images.githubusercontent.com/57321948/193536768-ae704adc-32d9-4c6c-b234-79c152f756c5.png)
 
 ### **3. API & Serving Layer**
@@ -151,11 +121,11 @@ The problem is to reduce the cost due to unnecessary repairs. So it is required 
 * Fully containerized using **Docker**.
 * Integrated with **CI/CD pipelines** for automated build and deployment.
 * Supports both **local** and **AWS-based deployment**.
-  ## Deployment Architecture
+  #### Deployment Architecture
   ![image](https://user-images.githubusercontent.com/57321948/193536973-4530fe7d-5509-4609-bfd2-cd702fc82423.png)
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 | Layer           | Tools & Technologies |
 | --------------- | -------------------- |
@@ -169,7 +139,7 @@ The problem is to reduce the cost due to unnecessary repairs. So it is required 
 
 ---
 
-## 🚀 How It Works
+## How It Works
 
 1. **Kafka Producer** streams sensor data from the local environment.
 2. **Kafka Consumer** listens to the topic and writes data to MongoDB.
@@ -181,7 +151,7 @@ The problem is to reduce the cost due to unnecessary repairs. So it is required 
 
 ---
 
-## 📦 Output Artifacts
+## Output Artifacts
 
 | Stage          | Output                                    |
 | -------------- | ----------------------------------------- |
@@ -201,26 +171,15 @@ It demonstrates:
 * **Automation:** Minimal human intervention across the ML lifecycle.
 * **Scalability:** Modular, Dockerized setup ready for enterprise environments.
 * **Production-grade Design:** Real-time ingestion, validation, training, and inference flow.
-
+  
 ---
-
-## 💼 Recruiter Note
-
-This project reflects strong **cross-disciplinary expertise** across Data Engineering, ML, and MLOps — demonstrating:
-
-* Hands-on experience with **streaming data systems** (Kafka, MongoDB).
-* End-to-end **model lifecycle management** via APIs.
-* Practical understanding of **CI/CD, Dockerization**, and **FastAPI-based deployment**.
-  It’s a **portfolio-grade, ATS-friendly project** aligning with Google and AWS AI engineering standards.
-
----
-#### Project Setup for running locally
-### Step 1: Clone the repository
+## Project Setup for running locally
+#### Step 1: Clone the repository
 ```bash
 git clone https://github.com/sethusaim/Sensor-Fault-Detection.git
 ```
 
-### Step 2- Create a conda environment after opening the repository
+#### Step 2- Create a conda environment after opening the repository
 
 ```bash
 conda create -n sensor python=3.11.13 -y
@@ -230,12 +189,13 @@ conda create -n sensor python=3.11.13 -y
 conda activate sensor
 ```
 
-### Step 3 - Install the requirements
+#### Step 3 - Install the requirements
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 4 - Set environment variable in .env file
+#### Step 4 - Set environment variable in .env file
+Make sure that you are having MongoDB in your local system, with Compass since we are using MongoDB for data storage. You also need AWS account to access the service like S3, ECR and EC2 instances. Once AWS account is created, add the below environment variables: 
 ```bash
 AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
 
@@ -247,24 +207,24 @@ MONGODB_URL="mongodb+srv://<username>:<password>@-projects.7eh1w4s.mongodb.net/?
 
 ```
 
-### Step 5 - Run the application server
+#### Step 5 - Run the application server
 ```bash
 python main.py
 ```
 
-### Step 6. Train application
+#### Step 6. Train application
 ```bash
 http://localhost:8080/train
 
 ```
 
-### Step 7. Prediction application
+#### Step 7. Prediction application
 ```bash
 http://localhost:8080/predict
 
 ```
 
-## Run locally using Docker
+#### Run locally using Docker
 
 1. Check if the Dockerfile is available in the project directory
 
@@ -282,7 +242,5 @@ docker run -d -p 8080:8080 <IMAGE_NAME>
 ## 📚 License & Attribution
 
 Developed by **Ritu Gujela**
-For academic and professional demonstration purposes.
-All data and environment keys are anonymized.
 
 ---
