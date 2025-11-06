@@ -91,7 +91,7 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
 
 ## Components
 
-### **1. Data Engineering (ETL Layer)**
+### **1. Data Engineering (ETL)**
 
 * Streams live APS sensor data to Kafka.
 * Consumes and stores data in MongoDB.
@@ -100,7 +100,7 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
 ![image](https://user-images.githubusercontent.com/57321948/193536736-5ccff349-d1fb-486e-b920-02ad7974d089.png)
 
 
-### **2. Machine Learning (Model Layer)**
+### **2. Machine Learning (Model Training)**
 
 * Binary classification model to predict fault occurrence.
 * Trained using validated and transformed features.
@@ -108,7 +108,7 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
   #### Project Architecture
 ![image](https://user-images.githubusercontent.com/57321948/193536768-ae704adc-32d9-4c6c-b234-79c152f756c5.png)
 
-### **3. MLOps Deployment Layer**
+### **3. MLOps Deployment**
 
 * Fully containerized using **Docker**.
 * Integrated with **CI/CD pipelines** for automated build and deployment.
