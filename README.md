@@ -7,6 +7,7 @@ This repository contains the **complete Sensor Fault Detection System**, integra
 The system identifies **Air Pressure System (APS)** faults by analyzing live sensor data streams, automating the entire lifecycle — from **data ingestion** to **real-time fault prediction APIs**.
 
 ---
+![sens copy](https://github.com/user-attachments/assets/5855f372-1c57-4bfb-a8eb-43bd160d1b0a)
 
 ## Project Summary
 
