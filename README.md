@@ -22,7 +22,6 @@ It automates:
 * **Deployment** → Dockerized and CI/CD-ready for scalable deployment on AWS or local environments.
 
 By reducing false positives and improving system reliability, this project supports **predictive maintenance** and **cost-effective operations** in safety-critical automotive systems.
-#### Access the full Data Engineering Pipeline: https://github.com/rituuu/Sensor-Fault-Detection-Data-Engineering-Pipeline.git
 ---
 
 ## 🌟 Key Achievements
@@ -94,7 +93,7 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
 ## Components
 
 ### **1. Data Engineering (ETL)**
-
+Access the full Data Engineering Pipeline: https://github.com/rituuu/Sensor-Fault-Detection-Data-Engineering-Pipeline.git
 * Streams live APS sensor data to Kafka.
 * Consumes and stores data in MongoDB.
 * Performs automated ingestion, validation, and transformation.
