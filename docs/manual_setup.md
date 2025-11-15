@@ -1,5 +1,3 @@
-![alt text](https://ineuron.ai/images/ineuron-logo.png)
-
 # Infrastructure Setup 
 
 ## AWS Cloud Setup 
