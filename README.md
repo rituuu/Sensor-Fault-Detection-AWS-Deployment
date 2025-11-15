@@ -8,7 +8,7 @@ The system identifies **Air Pressure System (APS)** faults by analyzing live sen
 
 ---
 ![sens copy](https://github.com/user-attachments/assets/5855f372-1c57-4bfb-a8eb-43bd160d1b0a)
-
+Data Engineering Pipeline: https://github.com/rituuu/Sensor-Fault-Detection-Data-Engineering-Pipeline.git
 ## Project Summary
 
 The **Sensor Fault Detection** project represents an end-to-end implementation of an AI-powered fault detection system designed for **industrial IoT (IIoT)** use cases.
