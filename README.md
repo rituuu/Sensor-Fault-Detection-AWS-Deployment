@@ -22,7 +22,7 @@ It automates:
 * **Deployment** → Dockerized and CI/CD-ready for scalable deployment on AWS or local environments.
 
 By reducing false positives and improving system reliability, this project supports **predictive maintenance** and **cost-effective operations** in safety-critical automotive systems.
-Access the full Data Engineering Pipeline: https://github.com/rituuu/Sensor-Fault-Detection-Data-Engineering-Pipeline.git
+#### Access the full Data Engineering Pipeline: https://github.com/rituuu/Sensor-Fault-Detection-Data-Engineering-Pipeline.git
 ---
 
 ## 🌟 Key Achievements
